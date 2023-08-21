@@ -1,0 +1,45 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("../assets/fonts/PPEditorialNew-Italic.otf");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../assets/fonts/PPNeueMontreal-Medium.otf");
+}
+
+/* Variables */
+:root {
+  --light-bg: #ebeae4;
+  --all-bg: #dad9d3;
+  --dark-coffee: #3f3b37;
+  --coal-lemon: #caca17;
+  --creamy-milk: #fafafa;
+}
