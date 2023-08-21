@@ -46,7 +46,7 @@ img {
 
 /* Base Styles */
 .container > * {
-  max-width: 2000px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -635,6 +635,8 @@ footer .footer__links a {
   section.about {
     padding: 9.5rem 2.5rem;
     gap: 16rem;
+    max-width: 80rem;
+    margin: auto;
   }
 
   .about__highlights {
