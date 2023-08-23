@@ -15,7 +15,8 @@ ul li {
   list-style: none;
 }
 
-img {
+img,
+video {
   width: 100%;
 }
 
@@ -166,6 +167,7 @@ nav > *:not(.nav__title) a {
 
 .tech-stacks .tech-stacks__tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 
@@ -330,6 +332,10 @@ nav .italic {
   border-radius: 1.5rem;
 }
 
+.thumbnail video {
+  border-radius: 1rem;
+}
+
 .next-project p {
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -414,7 +420,8 @@ footer .footer__links a {
   }
 
   .showcase-container .showcase img,
-  .thumbnail img {
+  .thumbnail img,
+  .thumbnail video {
     border-radius: 2rem;
   }
 
