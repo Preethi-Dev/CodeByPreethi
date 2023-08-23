@@ -123,6 +123,7 @@ nav > *:not(.nav__title) a {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .highlight .highlight__description {
@@ -150,6 +151,7 @@ nav > *:not(.nav__title) a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 80%;
 }
 
 .highlight .tech-stacks p {
@@ -175,6 +177,19 @@ nav > *:not(.nav__title) a {
   border-radius: 4rem;
   border: 1px solid var(--dark-coffee, #3f3b37);
   padding: 0.25rem 1rem;
+}
+
+.purpose,
+.purpose p:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.purpose p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .next-project {
@@ -336,6 +351,23 @@ nav .italic {
   border-radius: 1rem;
 }
 
+.purpose {
+  gap: 1rem;
+  padding: 2rem 1rem 5rem 1rem;
+}
+
+.purpose p:last-child {
+  gap: 1rem;
+}
+
+.purpose .title {
+  font-size: 1.875rem;
+}
+
+.purpose p {
+  font-size: 0.875rem;
+}
+
 .next-project p {
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -369,6 +401,20 @@ footer {
 footer .footer__links a {
   font-size: 0.75rem;
   line-height: 1.125rem;
+}
+
+/* Small Tablet Styles */
+@media all and (min-width: 600px) {
+  .purpose {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3.5rem;
+    padding: 2rem 2.5rem 5rem;
+  }
+
+  .purpose p:last-child {
+    max-width: 20rem;
+  }
 }
 
 /* Tablet Styles */
@@ -520,6 +566,11 @@ footer .footer__links a {
     row-gap: 11rem;
     column-gap: 2.5rem;
     padding: 0rem 2.5rem 12rem 2.5rem;
+  }
+
+  .purpose p:last-child {
+    font-size: 1.25rem;
+    max-width: 30rem;
   }
 
   .next-project {
