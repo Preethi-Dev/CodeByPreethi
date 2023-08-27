@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Code By Preethi</title>
+    <style>
+      html.lenis {
+        height: auto;
+      }
+      .lenis.lenis-smooth {
+        scroll-behavior: auto;
+      }
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
+      <!-- cursor starts here -->
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+      <!-- cursor ends here -->
+
       <!--Navigation start here-->
       <header>
         <nav>
@@ -502,5 +521,50 @@
       </footer>
       <!--footer ends here-->
     </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+      "use strict"; // fix lenis in safari
+
+      const lenis = new Lenis({
+        lerp: 0.3,
+        wheelMultiplier: 0.7,
+        infinite: false,
+        gestureOrientation: "vertical",
+        normalizeWheel: false,
+        smoothTouch: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      $("[data-lenis-start]").on("click", function () {
+        lenis.start();
+      });
+      $("[data-lenis-stop]").on("click", function () {
+        lenis.stop();
+      });
+      $("[data-lenis-toggle]").on("click", function () {
+        $(this).toggleClass("stop-scroll");
+        if ($(this).hasClass("stop-scroll")) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      });
+
+      function connectToScrollTrigger() {
+        lenis.on("scroll", ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+      }
+      // Uncomment this if using GSAP ScrollTrigger
+      // connectToScrollTrigger();
+    </script>
   </body>
 </html>

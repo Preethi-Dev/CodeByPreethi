@@ -45,6 +45,50 @@ img {
 }
 
 /* Base Styles */
+.cursor-dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--coal-lemon);
+  transition: width 0.3s, height 0.3s;
+}
+
+.cursor-outline {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2px solid var(--dark-coffee);
+  transition: border 0.3s;
+}
+
+.cursor-dot.active-link {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.cursor-dot.active-link::after {
+  content: "view";
+  color: var(--dark-coffee);
+  font-family: "PP Neue Montreal";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-outline.active-link {
+  border: 0px;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .container > * {
   max-width: 1600px;
   margin: 0 auto;

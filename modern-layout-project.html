@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/project-showcase.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <title>Modern Layouts - Code By Preethi</title>
   </head>
-  <body>
+  <body class="locomotive-scroll">
     <div class="container">
       <header>
         <nav>
@@ -38,14 +42,21 @@
         <section class="intro">
           <div class="intro__titles">
             <div class="intro__title">
-              <p id="numbered">01</p>
-              <p>
+              <p
+                id="numbered"
+                data-scroll
+                data-scroll-speed="2"
+                data-scroll-position="top"
+              >
+                01
+              </p>
+              <p data-scroll data-scroll-speed="1" data-scroll-position="top">
                 Mo<span class="italic">d</span>er<span class="italic">n</span>
               </p>
               <div class="horizontal-line"></div>
             </div>
             <div class="intro__title">
-              <p>
+              <p data-scroll data-scroll-speed="3" data-scroll-position="top">
                 La<span class="italic">y</span>ou<span class="italic">t</span>s
               </p>
               <div class="horizontal-line"></div>
@@ -56,7 +67,12 @@
 
         <!-- thumbnail starts here -->
         <section class="thumbnail">
-          <img src="./assets/images/project-thumbnail-01.jpg" alt="" />
+          <img
+            src="./assets/images/project-thumbnail-01.jpg"
+            alt=""
+            data-scroll
+            data-scroll-speed="2"
+          />
         </section>
         <!-- thumbnail ends here -->
 
@@ -90,17 +106,27 @@
 
         <!-- project showcase starts here -->
         <section class="showcase-container">
-          <div class="showcase showcase__01">
+          <div class="showcase showcase__01" data-scroll data-scroll-speed="2">
             <img src="./assets/images/modern-layout-01.jpg" alt="" />
           </div>
           <div class="showcase showcase__02">
             <img src="./assets/images/modern-layout-02.jpg" alt="" />
           </div>
           <div class="showcase showcase__03">
-            <img src="./assets/images/modern-layout-03.jpg" alt="" />
+            <img
+              src="./assets/images/modern-layout-03.jpg"
+              alt=""
+              data-scroll
+              data-scroll-speed="5"
+            />
           </div>
           <div class="showcase showcase__04">
-            <img src="./assets/images/modern-layout-04.jpg" alt="" />
+            <img
+              src="./assets/images/modern-layout-04.jpg"
+              alt=""
+              data-scroll
+              data-scroll-speed="2"
+            />
           </div>
           <div class="showcase showcase__05">
             <img src="./assets/images/modern-layout-05.jpg" alt="" />
@@ -108,16 +134,16 @@
           <div class="showcase showcase__06">
             <img src="./assets/images/modern-layout-06.jpg" alt="" />
           </div>
-          <div class="showcase showcase__07">
+          <div class="showcase showcase__07" data-scroll data-scroll-speed="2">
             <img src="./assets/images/modern-layout-07.jpg" alt="" />
           </div>
-          <div class="showcase showcase__08">
+          <div class="showcase showcase__08" data-scroll data-scroll-speed="5">
             <img src="./assets/images/modern-layout-08.jpg" alt="" />
           </div>
           <div class="showcase showcase__09">
             <img src="./assets/images/modern-layout-09.jpg" alt="" />
           </div>
-          <div class="showcase showcase__10">
+          <div class="showcase showcase__10" data-scroll data-scroll-speed="2">
             <img src="./assets/images/modern-layout-10.jpg" alt="" />
           </div>
         </section>
@@ -140,14 +166,22 @@
           <!--footer title-->
           <div class="footer__titles">
             <div class="footer__title">
-              <p>
+              <p
+                data-scroll
+                data-scroll-speed="1"
+                data-scroll-position="bottom"
+              >
                 Le<span class="italic">t</span>’s Wo<span class="italic">r</span
                 >k
               </p>
               <div class="horizontal-line"></div>
             </div>
             <div class="footer__title">
-              <p>
+              <p
+                data-scroll
+                data-scroll-speed="3"
+                data-scroll-position="bottom"
+              >
                 To<span class="italic">g</span>et<span class="italic">h</span>er
               </p>
               <div class="horizontal-line"></div>
@@ -181,5 +215,26 @@
         </footer>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <script>
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".locomotive-scroll"),
+        smooth: true,
+        smartphone: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
+        smoothMobile: 1,
+        multiplier: 0.4,
+      });
+
+      // Wait 2 seconds then calculate the new page height
+      setTimeout(() => {
+        locoScroll.update();
+      }, 2000);
+    </script>
   </body>
 </html>

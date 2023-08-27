@@ -62,6 +62,11 @@ body {
   background: var(--dark-coffee, #3f3b37);
 }
 
+/* wider class added specially for locomotive scroll */
+.wider .horizontal-line {
+  height: 0.15rem;
+}
+
 nav a {
   color: var(--dark-coffee, #3f3b37);
   font-size: 1.125rem;
