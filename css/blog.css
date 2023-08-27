@@ -141,6 +141,7 @@ nav > *:not(.nav__title) a {
 
 .tech-stacks .tech-stacks__tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 
@@ -420,6 +421,14 @@ footer .footer__links a {
   .highlight .highlight__description {
     font-size: 1.875rem;
     max-width: 30rem;
+  }
+
+  .highlight .tech-stacks p {
+    font-size: 1.125rem;
+  }
+
+  .tech-stacks .tech-stacks__tags p {
+    padding: 0.5rem 1rem;
   }
 
   .blog__lists {
