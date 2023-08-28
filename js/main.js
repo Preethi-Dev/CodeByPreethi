@@ -6,6 +6,9 @@ const about = document.querySelector(".part__about");
 const showcase01 = document.querySelector(".project__showcase:nth-child(1)");
 const showcase02 = document.querySelector(".project__showcase:nth-child(2)");
 const footerCTA = document.querySelector(".footer__cta");
+const works = document.querySelectorAll(".part__work");
+const blogs = document.querySelectorAll(".part__blog");
+const abouts = document.querySelectorAll(".part__about");
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
@@ -68,14 +71,20 @@ footerCTA.addEventListener("click", (_) => {
   window.location.href = "mailto:selvampreethi360@gmail.com";
 });
 
-work.addEventListener("click", (_) => {
-  window.location.href = "./modern-layout-project.html";
+works.forEach((work) => {
+  work.addEventListener("click", (_) => {
+    window.location.href = "./modern-layout-project.html";
+  });
 });
 
-blog.addEventListener("click", (_) => {
-  window.location.href = "./blog.html";
+blogs.forEach((blog) => {
+  blog.addEventListener("click", (_) => {
+    window.location.href = "./blog.html";
+  });
 });
 
-about.addEventListener("click", (_) => {
-  window.location.href = "./about.html";
+abouts.forEach((about) => {
+  about.addEventListener("click", (_) => {
+    window.location.href = "./about.html";
+  });
 });
