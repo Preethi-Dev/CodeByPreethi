@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/project-showcase.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
@@ -38,6 +39,47 @@
         <div class="horizontal-line"></div>
       </header>
       <main>
+        <!-- modal overlay starts here -->
+        <section class="modal-overlay">
+          <div class="modal">
+            <div class="modal-header">
+              <div class="modal-title">
+                <a href=""
+                  >Co<span class="italic">d</span>e
+                  <span class="italic">B</span>y
+                </a>
+                <a href="">
+                  P<span class="italic">r</span>eet<span class="italic">h</span
+                  >i</a
+                >
+              </div>
+
+              <a href="" id="close-btn">Close</a>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="modal-links">
+              <div class="modal-link">
+                <p>Work</p>
+                <img src="./assets/images/arrow-up-right-modal.svg" alt="" />
+              </div>
+              <div class="modal-link">
+                <p>About</p>
+                <img src="./assets/images/arrow-up-right-modal.svg" alt="" />
+              </div>
+              <div class="modal-link">
+                <p>Blog</p>
+                <img src="./assets/images/arrow-up-right-modal.svg" alt="" />
+              </div>
+            </div>
+            <div class="modal-social-links">
+              <a href="">GitHub</a>
+              <a href="">Linkedin</a>
+              <a href="">Mail Me</a>
+              <div class="horizontal-line"></div>
+            </div>
+          </div>
+        </section>
+        <!-- modal overlay ends here -->
         <!-- intro starts here -->
         <section class="intro">
           <div class="intro__titles">
@@ -221,6 +263,7 @@
       </div>
     </div>
 
+    <script src="./js/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <script>
       const locoScroll = new LocomotiveScroll({
