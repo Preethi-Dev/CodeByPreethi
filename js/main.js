@@ -63,3 +63,19 @@ window.addEventListener("mousemove", (e) => {
     }
   });
 });
+
+footerCTA.addEventListener("click", (_) => {
+  window.location.href = "mailto:selvampreethi360@gmail.com";
+});
+
+work.addEventListener("click", (_) => {
+  window.location.href = "./modern-layout-project.html";
+});
+
+blog.addEventListener("click", (_) => {
+  window.location.href = "./blog.html";
+});
+
+about.addEventListener("click", (_) => {
+  window.location.href = "./about.html";
+});
