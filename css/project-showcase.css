@@ -138,6 +138,7 @@ nav > *:not(.nav__title) a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .highlight__link a {
