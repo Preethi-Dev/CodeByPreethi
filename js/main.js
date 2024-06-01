@@ -3,8 +3,9 @@ const cursorOutline = document.querySelector(".cursor-outline");
 const work = document.querySelector(".part__work");
 const blog = document.querySelector(".part__blog");
 const about = document.querySelector(".part__about");
-const showcase01 = document.querySelector(".project__showcase:nth-child(1)");
-const showcase02 = document.querySelector(".project__showcase:nth-child(2)");
+const showcase01 = document.querySelector(".preview-01");
+const showcase02 = document.querySelector(".preview-02");
+const showcase03 = document.querySelector(".preview-03");
 const footerCTA = document.querySelector(".footer__cta");
 const works = document.querySelectorAll(".part__work");
 const blogs = document.querySelectorAll(".part__blog");
@@ -46,7 +47,7 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
-[showcase01, showcase02, footerCTA].forEach((link) => {
+[showcase01, showcase02, showcase03, footerCTA].forEach((link) => {
   link.addEventListener("mouseenter", (e) => {
     if (link === showcase02) {
       cursorDot.classList.add("active-white-arrow-link");
