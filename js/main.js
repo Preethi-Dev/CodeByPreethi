@@ -74,7 +74,7 @@ footerCTA.addEventListener("click", (_) => {
 
 works.forEach((work) => {
   work.addEventListener("click", (_) => {
-    window.location.href = "./modern-layout-project.html";
+    window.location.href = "#essential-projects";
   });
 });
 
