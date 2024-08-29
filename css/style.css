@@ -197,12 +197,6 @@ footer .footer__titles {
   align-items: center;
 }
 
-.project .project__showcases {
-  display: flex;
-  flex-direction: column;
-  gap: 5.5rem;
-}
-
 .project .project__showcase__avatar {
   margin-bottom: 1rem;
 }
@@ -398,7 +392,8 @@ section.about {
   min-width: 7.125rem;
 }
 .about .el__lines .el__line p:nth-child(1) {
-  min-width: 8.5rem;
+  min-width: 15rem;
+  max-width: 15rem;
 }
 
 .about .horizontal-line,
@@ -435,6 +430,58 @@ footer .footer__links .italic {
 footer .footer__links a {
   font-size: 0.75rem;
   line-height: 1.125rem;
+}
+
+.project__showcases {
+  font-family: "PP Neue Montreal";
+  color: #3f3b37;
+}
+
+.project__showcase {
+  display: flex;
+  padding: 1.125rem;
+  flex-direction: column;
+  gap: 1rem;
+
+  border-radius: 1.5rem;
+  border: 1px solid #3f3b37;
+}
+
+.project .project__showcases {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project__showcase > .project__avatar {
+  width: 100%;
+}
+
+.project__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.project__tags {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.project__tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 110%;
+  padding: 0.25rem 1rem;
+
+  border-radius: 4rem;
+  border: 1px solid #3f3b37;
+}
+
+.project__title {
+  font-size: 1.5rem;
 }
 
 /* Tablet Styles */
@@ -514,10 +561,6 @@ footer .footer__links a {
     margin-bottom: 3rem;
   }
 
-  .project .project__showcases {
-    gap: 6.5rem;
-  }
-
   footer {
     padding: 6.5rem 1.5rem 2.5rem 1.5rem;
   }
@@ -530,6 +573,23 @@ footer .footer__links a {
 
   footer .footer__cta {
     min-width: 20rem;
+  }
+
+  .project__showcase {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .project__tags {
+    gap: 0.5rem;
+  }
+
+  .project__tag {
+    font-size: 1.125rem;
+  }
+
+  .project__title {
+    font-size: 2.5rem;
   }
 }
 
@@ -666,15 +726,12 @@ footer .footer__links a {
   }
 
   .project {
+    gap: 10rem;
     padding: 12.5rem 2.5rem;
   }
 
   .project .project__showcase__avatar img {
     border-radius: 0rem 0rem 9.5rem 0rem;
-  }
-
-  .project .project__showcases {
-    gap: 12rem;
   }
 
   .about .horizontal-line,
@@ -688,6 +745,21 @@ footer .footer__links a {
   .project .project__showcase__header p {
     font-size: 4.5rem;
     line-height: normal;
+  }
+
+  .project__showcase {
+    flex-direction: row;
+    align-items: end;
+    gap: 2.3125rem;
+    padding: 2.5rem;
+  }
+
+  .project__desc {
+    gap: 0.75rem;
+  }
+
+  .project__title {
+    font-size: 3rem;
   }
 
   .testimonials .testimonials__title:nth-child(1) img {
