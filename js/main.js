@@ -69,16 +69,18 @@ window.addEventListener("mousemove", (e) => {
 });
 
 showcase01.addEventListener("click", (_) => {
-  window.location.href =
-    "https://main--6658570a1b59e82cad5ef125.chromatic.com/?path=/docs/getting-started--docs";
+  window.open(
+    "https://main--6658570a1b59e82cad5ef125.chromatic.com/?path=/docs/getting-started--docs",
+    "_blank"
+  );
 });
 
 showcase02.addEventListener("click", (_) => {
-  window.location.href = "./modern-layout-project.html";
+  window.open("./modern-layout-project.html", "_blank");
 });
 
 showcase03.addEventListener("click", (_) => {
-  window.location.href = "https://www.keerthi.design/";
+  window.open("https://www.keerthi.design/", "_blank");
 });
 
 footerCTA.addEventListener("click", (_) => {

@@ -5,7 +5,7 @@ const link03 = document.querySelector(".modal-links .modal-link:nth-child(3)");
 const modern_layout_link = document.querySelector(".highlight__link");
 
 modern_layout_link.addEventListener("click", () => {
-  window.location.href = "https://github.com/Preethi-Dev/modern-layouts";
+  window.open("https://github.com/Preethi-Dev/modern-layouts", "_blank");
 });
 
 footerCTA.addEventListener("click", (_) => {
