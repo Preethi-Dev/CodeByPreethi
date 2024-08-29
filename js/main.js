@@ -5,6 +5,7 @@ const blog = document.querySelector(".part__blog");
 const about = document.querySelector(".part__about");
 const showcase01 = document.querySelector(".project__showcase:nth-child(1)");
 const showcase02 = document.querySelector(".project__showcase:nth-child(2)");
+const showcase03 = document.querySelector(".project__showcase:nth-child(3)");
 const footerCTA = document.querySelector(".footer__cta");
 const works = document.querySelectorAll(".part__work");
 const blogs = document.querySelectorAll(".part__blog");
@@ -46,7 +47,7 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
-[showcase01, showcase02, footerCTA].forEach((link) => {
+[showcase01, showcase02, showcase03, footerCTA].forEach((link) => {
   link.addEventListener("mouseenter", (e) => {
     if (link === showcase02) {
       cursorDot.classList.add("active-white-arrow-link");
@@ -67,13 +68,26 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
+showcase01.addEventListener("click", (_) => {
+  window.location.href =
+    "https://main--6658570a1b59e82cad5ef125.chromatic.com/?path=/docs/getting-started--docs";
+});
+
+showcase02.addEventListener("click", (_) => {
+  window.location.href = "./modern-layout-project.html";
+});
+
+showcase03.addEventListener("click", (_) => {
+  window.location.href = "https://www.keerthi.design/";
+});
+
 footerCTA.addEventListener("click", (_) => {
   window.location.href = "mailto:selvampreethi360@gmail.com";
 });
 
 works.forEach((work) => {
   work.addEventListener("click", (_) => {
-    window.location.href = "./modern-layout-project.html";
+    window.location.href = "#project";
   });
 });
 
